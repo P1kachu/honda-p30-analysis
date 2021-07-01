@@ -27,7 +27,6 @@ Tested with a M27C256B, but same pinout
 
 #define FW_END 0x7fffL
 
-// TODO
 static const int kPin_A0  = 53;
 static const int kPin_A1  = 51;
 static const int kPin_A2  = 49;
@@ -60,10 +59,6 @@ static const int kPin_D7 = 22;
 // GND/CE/OE should be wired to ground.
 // Vpp/Vcc/Vss should be wired to +5 volts.
 
-// TODO
-static const int kPin_CE = 0; // Chip Enable
-static const int kPin_OE = 0; // Output Enable
-
 const char hex[] = {'0', '1', '2', '3', '4', '5', '6', '7',
         '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
@@ -93,10 +88,6 @@ void setup()
         pinMode(kPin_D5, INPUT);
         pinMode(kPin_D6, INPUT);
         pinMode(kPin_D7, INPUT);
-
-        // set OE and CE ?
-        pinMode(kPin_CE, OUTPUT);
-        pinMode(kPin_OE, OUTPUT);
 
         pinMode(LED_BUILTIN, OUTPUT);
 
