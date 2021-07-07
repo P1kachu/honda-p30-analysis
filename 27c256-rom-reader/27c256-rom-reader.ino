@@ -151,6 +151,7 @@ void loop()
                 for (long x = 0; x < 16; x++)
                 {
                         SetAddress(addr + x); // tells the ROM the byte we want ...
+                        delayMicroseconds(1);
                         d[x] = ReadByte(); // reads the byte back from the ROM
                         checksum += d[x];
                 }
